@@ -25,3 +25,20 @@ void tambahPasien(string nama) {
     }
     cout << "Pasien \"" << nama << "\" ditambahkan ke antrian.\n";
 }
+// Fungsi untuk menampilkan semua pasien dalam antrian
+void tampilkanAntrian() {
+    if (head == nullptr) {
+        cout << "Antrian kosong.\n";
+        return;
+    }
+
+    cout << "Daftar Antrian Pasien:\n";
+    Pasien* temp = head;
+    int no = 1;
+
+    while (temp != nullptr) {
+        cout << no++ << ". " << temp->nama << endl;
+        temp = temp->next;
+    }
+}
+
