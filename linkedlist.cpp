@@ -41,4 +41,20 @@ void tampilkanAntrian() {
         temp = temp->next;
     }
 }
+// Fungsi untuk memanggil pasien paling depan (menghapus dari antrian)
+void panggilPasien() {
+    if (head == nullptr) {
+        cout << "Tidak ada pasien untuk dipanggil.\n";
+        return;
+    }
 
+    // Simpan pointer ke pasien yang akan dipanggil
+    Pasien* dipanggil = head;
+    cout << "Memanggil pasien: " << dipanggil->nama << endl;
+
+    // Pindahkan head ke pasien berikutnya
+    head = head->next;
+
+    // Hapus pasien dari memori
+    delete dipanggil;
+}
