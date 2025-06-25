@@ -79,5 +79,9 @@ void hapusSemua() {
     }
     cout << "Semua antrian telah dihapus.\n";
 }
+// Fungsi utama program
+int main() {
+    int pilihan;
+    string nama;
 
 
